@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <script src="validation.js"></script>
+    <style>
+        table { width: 50%; margin: auto; border-collapse: collapse; }
+        td { border: 1px solid black; padding: 10px; }
+        input, select { width: 90%; }
+        table{ background-color: rgba(87, 53, 9, 0.301); }
+        body{
+            background-image:url(14.jpg);
+            background-size: auto;
+            background-position: center;
+        }
+        body::before{
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(224, 238, 143, 0.5);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Create an Account</h2>
+    <!-- ✅ أضفنا method و action -->
+    <form method="POST" action="accontt.php">
+        <table>
+            <!-- ✅ أضفنا name لكل حقل باش PHP يلقاهم -->
+            <tr><td>Nom :</td><td><input type="text" id="nom" name="nom" required></td></tr>
+            <tr><td>Prenom :</td><td><input type="text" id="prenom" name="prenom" required></td></tr>
+            <tr><td>Age :</td><td><input type="number" id="age" name="age" required></td></tr>
+            <tr><td>Wilaya :</td><td>
+                <select id="wilaya" name="wilaya" required>
+                    <option value="">-- Choisir --</option>
+                    <option value="Setif">Setif</option>
+                    <option value="Alger">Alger</option>
+                    <option value="Oran">Oran</option>
+                    <option value="Constantine">Constantine</option>
+                </select>
+            </td></tr>
+            <tr><td>Telephone :</td><td><input type="text" id="telephone" name="telephone" required></td></tr>
+            <tr><td>E-mail :</td><td><input type="email" id="email" name="email" required></td></tr>
+            <tr><td>Adresse :</td><td><input type="text" id="adresse" name="adresse" required></td></tr>
+            <tr><td>Mot de passe :</td><td><input type="password" id="password" name="password" required></td></tr>
+            <tr><td>Confirmer le mot de passe :</td><td><input type="password" id="confirmPassword" name="confirmPassword" required></td></tr>
+            <tr><td>Sexe :</td><td>
+                <input type="radio" name="sexe" value="Homme" required> Homme
+                <input type="radio" name="sexe" value="Femme"> Femme
+            </td></tr>
+            <tr><td colspan="2"><input type="submit" value="Inscrire"></td></tr>
+        </table>
+        <p><a href="commande.html" class="btn" style="text-align: center;">Commander</a></p>
+    </form>
+</body>
+</html>
